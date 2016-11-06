@@ -1,1 +1,32 @@
-<h1>{{ vm.title }}</h1>
+<section class="container">
+  <h1>Game Log Viewer</h1>
+  <div class="row">
+    <div class="col-xs-12" ng-repeat="log in vm.gameLog">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Game {{ $index + 1 }} Log</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <strong>Total numer of kills in the game {{ log.game.total_kills }}</strong>
+            <hr>
+            <div class="col-sm-12 col-md-6">
+              <strong>List of players in the game</strong>
+              <ul>
+                <li ng-repeat="player in log.game.players">{{ player }}</li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <strong>Number of kills by player</strong>
+              <ul>
+                <li ng-repeat="(player, kills) in log.game.kills" ng-if="kills !== null && kills !== 0">
+                  <span>{{ player }} made {{ kills }} points</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

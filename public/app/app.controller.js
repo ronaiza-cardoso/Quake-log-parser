@@ -11,7 +11,12 @@
     var vm = this;
 
     (function () {
-      vm.title = 'TEST';
+      AppService.getGameLog().then(getResult);
+
+      function getResult ( response ) {
+        vm.gameLog = response.data;
+        console.log(vm.gameLog);
+      }
     })();
   }
 })();

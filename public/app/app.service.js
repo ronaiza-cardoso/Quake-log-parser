@@ -14,7 +14,7 @@
     return services;
 
     function getGameLog () {
-      //
+      return $http.get('/games');
     }
   }
 })();
