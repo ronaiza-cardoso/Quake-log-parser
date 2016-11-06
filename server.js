@@ -3,7 +3,7 @@ const fs = require('fs');
 const Parser = require('./lib/Parser');
 
 const app = express();
-const PORT = 6969;
+const PORT = 7979;
 
 app.use(express.static(__dirname + '/public'));
 

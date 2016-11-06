@@ -1,0 +1,23 @@
+{
+  "name": "quake-log-parser",
+  "description": "parser para o arquivo de log do servidor de quake 3 arena",
+  "main": "index.js",
+  "authors": [
+    "Ronaiza Cardoso <ronaizacard@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "parser",
+    "log",
+    "games",
+    "test",
+    "angular"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-bootstrap": "^2.2.0",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7"
+  }
+}
