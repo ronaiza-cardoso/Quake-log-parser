@@ -1,9 +1,11 @@
+'use strict';
+
 const express = require('express');
 const fs = require('fs');
 const Parser = require('./lib/Parser');
 
 const app = express();
-const PORT = 7979;
+const PORT = 4000;
 
 app.use(express.static(__dirname + '/public'));
 
