@@ -4,7 +4,7 @@
   "description": "parser para o arquivo de log do servidor de quake 3 arena",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "server": "npm install && cd public/ && bower install && cd .. & node server.js && exit 0"
   },
   "keywords": [
