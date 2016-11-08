@@ -73,3 +73,23 @@ describe('Parser', () => {
     });
   });
 });
+
+describe('Parser', () => {
+  it('parse() should return number of kills per player', (done) => {
+
+    fs.readFile('./games.log', (err, logData) => {
+      if ( err ) throw err;
+
+      let text     = logData.toString();
+      let myParser = new Parser();
+      let result   = myParser.parse(text);
+
+      console.log(result[9].game.kills['Assasinu Credi']);
+
+      expect( ( result[9].game.kills['Assasinu Credi'] ) ).to.be.a('number');
+
+      done();
+
+    });
+  });
+});
