@@ -51,3 +51,23 @@ describe('Parser', () => {
     });
   });
 });
+
+describe('Parser', () => {
+  it('parse() should return game players', (done) => {
+
+    fs.readFile('./games.log', (err, logData) => {
+      if ( err ) throw err;
+
+      let text     = logData.toString();
+      let myParser = new Parser();
+      let result   = myParser.parse(text);
+
+      console.log(result[9].game.players);
+
+      expect( ( result[9].game.players ) ).to.be.a('array');
+
+      done();
+
+    });
+  });
+});
